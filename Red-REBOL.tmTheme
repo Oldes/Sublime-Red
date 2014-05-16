@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>author</key>
+  <string>Oldes (based on LAZY theme by Domenico Carbotta)</string>
+  <key>name</key>
+  <string>RED and REBOL</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key>
+        <string>#FFFFFF</string>
+        <key>caret</key>
+        <string>#7C7C7C</string>
+        <key>foreground</key>
+        <string>#000000</string>
+        <key>invisibles</key>
+        <string>#B6B6B6</string>
+        <key>lineHighlight</key>
+        <string>#EFFCA68F</string>
+        <key>selection</key>
+        <string>#E3FC8D</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Comment</string>
+      <key>scope</key>
+      <string>comment</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>italic</string>
+        <key>foreground</key>
+        <string>#8C868F</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Comment docline</string>
+      <key>scope</key>
+      <string>comment.docline</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#FFFFFF</string>
+        <key>background</key>
+        <string>#580909</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Comment todo</string>
+      <key>scope</key>
+      <string>comment.todo</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#FFFFFF</string>
+        <key>background</key>
+        <string>#f803fb</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Constant</string>
+      <key>scope</key>
+      <string>constant</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Entity</string>
+      <key>scope</key>
+      <string>entity</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Latex Entity</string>
+      <key>scope</key>
+      <string>text.tex.latex entity</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#D62A28</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Keyword</string>
+      <key>scope</key>
+      <string>keyword, storage</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#FF7800</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Refinement</string>
+      <key>scope</key>
+      <string>keyword.refinement</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#771919</string>
+      </dict>
+    </dict>
+
+    
+    <dict>
+      <key>name</key>
+      <string>String</string>
+      <key>scope</key>
+      <string>string, meta.verbatim</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#409B1C</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>String - character</string>
+      <key>scope</key>
+      <string>string.character</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3b8d1b</string>
+      </dict>
+    </dict>
+    
+    <dict>
+      <key>name</key>
+      <string>String - issue</string>
+      <key>scope</key>
+      <string>string.issue</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#33312f</string>
+        <key>background</key>
+        <string>#fdeacc</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Binary</string>
+      <key>scope</key>
+      <string>binary.base64, binary.base16, binary.base2, string.binary</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3D8A46</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Binary prefix</string>
+      <key>scope</key>
+      <string>string.binary.prefix</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#1F6C28</string>
+      </dict>
+    </dict>
+    
+    <dict>
+      <key>name</key>
+      <string>Number</string>
+      <key>scope</key>
+      <string>constant.numeric, logic</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#7220ae</string>
+      </dict>
+    </dict>
+    
+
+    <dict>
+      <key>name</key>
+      <string>Support</string>
+      <key>scope</key>
+      <string>support</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Support - loops and conditions</string>
+      <key>scope</key>
+      <string>support.function.group2</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Support - Function name</string>
+      <key>scope</key>
+      <string>support.variable.function</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#ffffff</string>
+        <key>background</key>
+        <string>#f80a0a</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Support - Function definition</string>
+      <key>scope</key>
+      <string>function.definition</string>
+      <key>settings</key>
+      <dict>
+        <key>background</key>
+        <string>#F9FBF9</string>
+      </dict>
+    </dict>
+
+    
+    <dict>
+      <key>name</key>
+      <string>Support - variable</string>
+      <key>scope</key>
+      <string>support.variable</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#f80a0a</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Support - Set word</string>
+      <key>scope</key>
+      <string>support.variable.setword</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#f80a0a</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Support - datatype</string>
+      <key>scope</key>
+      <string>support.type</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#877c2a</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Support - strong</string>
+      <key>scope</key>
+      <string>support.strong</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+        <key>foreground</key>
+        <string>#ff0000</string>
+      </dict>
+    </dict>
+    
+    <dict>
+      <key>name</key>
+      <string>Support - function</string>
+      <key>scope</key>
+      <string>keyword.function</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#877c2a</string>
+        <key>background</key>
+        <string></string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+      <string>Variable</string>
+      <key>scope</key>
+      <string>variable</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Invalid – Deprecated</string>
+      <key>scope</key>
+      <string>invalid.deprecated</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>italic</string>
+        <key>foreground</key>
+        <string>#990000</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Invalid – Illegal</string>
+      <key>scope</key>
+      <string>invalid.illegal</string>
+      <key>settings</key>
+      <dict>
+        <key>background</key>
+        <string>#9D1E15</string>
+        <key>foreground</key>
+        <string>#F8F8F8</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Superclass</string>
+      <key>scope</key>
+      <string>entity.other.inherited-class</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>italic</string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>String interpolation</string>
+      <key>scope</key>
+      <string>string constant.other.placeholder</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#671EBB</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>meta.function-call.py</string>
+      <key>scope</key>
+      <string>meta.function-call.py</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3E4558</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>meta.tag</string>
+      <key>scope</key>
+      <string>meta.tag, meta.tag entity</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#3A4A64</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml variant</string>
+      <key>scope</key>
+      <string>keyword.type.variant</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#7F90AA</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml operator</string>
+      <key>scope</key>
+      <string>source.ocaml keyword.operator</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#000000</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml infix operator</string>
+      <key>scope</key>
+      <string>source.ocaml keyword.operator.symbol.infix</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml prefix operator</string>
+      <key>scope</key>
+      <string>source.ocaml keyword.operator.symbol.prefix</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#3B5BB5</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml infix f-p operator</string>
+      <key>scope</key>
+      <string>source.ocaml keyword.operator.symbol.infix.floating-point</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>underline</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml prefix f-p operator</string>
+      <key>scope</key>
+      <string>source.ocaml keyword.operator.symbol.prefix.floating-point</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>underline</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>OCaml f-p constant</string>
+      <key>scope</key>
+      <string>source.ocaml constant.numeric.floating-point</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>underline</string>
+      </dict>
+    </dict>
+  </array>
+  <key>uuid</key>
+  <string>A1E55FCB-3CD2-4811-9E73-D9B87419443A</string>
+</dict>
+</plist>
