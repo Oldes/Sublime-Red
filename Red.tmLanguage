@@ -822,14 +822,6 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#value-date</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#value-time</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#value-tuple</string>
 				</dict>
 				<dict>
@@ -946,6 +938,14 @@
 				<dict>
 					<key>include</key>
 					<string>#value-number-hex</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value-date</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value-time</string>
 				</dict>
 				<dict>
 					<key>include</key>

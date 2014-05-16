@@ -351,8 +351,6 @@
 
 		"values": {
 			"patterns": [
-				{ "include": "#value-date" },
-				{ "include": "#value-time" },
 				{ "include": "#value-tuple" },
 				{ "include": "#value-number" },
 				{ "include": "#value-pair" },
@@ -477,6 +475,8 @@
 			"name": "word.red",
 			"patterns": [
 				{ "include": "#value-number-hex" },
+				{ "include": "#value-date" },
+				{ "include": "#value-time" },
 				{ "include": "#function-definition" },
 				{ "include": "#function-definition-does"},
 				{ "include": "#word-refinement" },
