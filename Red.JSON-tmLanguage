@@ -368,7 +368,7 @@
 		
 		"word-operator": {
 			"name": "keyword.operator.comparison",
-			"match": "(==|!=|<=|>=|<>|<|>|\\+|-|=|\\*|%|/|\\b(and|or|xor)(\\s|[\\(|\\[]))"
+			"match": "(==|!=|<=|>=|<>|<|>|\\+|-|=|\\*|%|/|\\b(and|or|xor))(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
 		},
 
 		"parens": {
@@ -398,33 +398,33 @@
 		
 		"word-group1": {
 			"name": "support.function.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[|/|;|\\\"|{)"
 		},
 
 		"word-group2": {
 			"name": "support.function.group2.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(if|either|unless|else|for|foreach|forall|remove-each|until|while|case|loop|repeat|switch)(?=\\s|\\(|\\[|/)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(if|either|unless|else|for|foreach|forall|remove-each|until|while|case|loop|repeat|switch)(?=\\s|\\(|\\[|/|;|\\\"|{)"
 		},
 
 		"word-group3": {
 			"name": "keyword.series.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(insert|append|tail|head|back|repend)(?=\\s|\\(|\\[|\\)|\\]|/)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(insert|append|tail|head|back|repend)(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
 		},
 		
 		"word-group4": {
 			"name": "logic.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(off|false|none|on|true|yes|no|null)(?=\\s|\\(|\\[|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(off|false|none|on|true|yes|no|null)(?=\\s|\\(|\\[|\\)|\\]|;|\\\"|{)"
 		},
 
 		"word-group5": {
 			"name": "keyword.breaks.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(halt|quit|exit|return|break|quit)(?=\\s|\\(|\\[|/)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(halt|quit|exit|return|break|quit)(?=\\s|\\(|\\[|/|;|\\\"|{)"
 		},
 
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo
 		"word": {
 			"name": "word.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9\\*\\?=_-]*(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9\\*\\?=_-]*(?=\\s|\\)|\\]|/|;|\\\"|{)"
 		},
 
 		"function-definition-block": {
