@@ -3,7 +3,7 @@ Sublime-Red
 
 Sublime Text package for Red language [(www.red-lang.org)](http://www.red-lang.org)
 
-![Screenshot](https://raw.github.com/oldes/Sublime-Red/master/preview/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/Oldes/Sublime-Red/preview/preview/screenshot.png)
 
 # Installation
 
