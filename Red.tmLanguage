@@ -912,7 +912,7 @@
 		<key>word-operator</key>
 		<dict>
 			<key>match</key>
-			<string>(==|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;|\+|-|=|\*|%|/|\b(and|or|xor))(?=\s|\(|\[|\)|\]|/|;|\"|{)</string>
+			<string>(==|!=|&lt;=|&gt;=|&lt;&gt;|&lt;|&gt;|&gt;&gt;|&gt;&gt;&gt;|&lt;&lt;|\+|-|=|\*|%|/|\b(and|or|xor))(?=\s|\(|\[|\)|\]|/|;|\"|{)</string>
 			<key>name</key>
 			<string>keyword.operator.comparison</string>
 		</dict>
