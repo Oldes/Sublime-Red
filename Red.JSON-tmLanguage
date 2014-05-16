@@ -450,8 +450,8 @@
 			},
 			"patterns": [
 				{ "include": "#function-definition-block" },
-				{ "include": "#strings" },
 				{ "include": "#comments" },
+				{ "include": "#strings" },
 				{ "include": "#word-setword" },
 				{ "include": "#word-datatype" },
 				{ "include": "#word-refinement" }
