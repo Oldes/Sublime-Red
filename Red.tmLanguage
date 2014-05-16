@@ -974,10 +974,6 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#word-question</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#word-group1</string>
 				</dict>
 				<dict>
