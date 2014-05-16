@@ -420,6 +420,11 @@
 			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(halt|quit|exit|return|break|quit)(?=\\s|\\(|\\[|/|;|\\\"|{)"
 		},
 
+		"word-reds-contexts": {
+			"name": "entity.other.inherited-class.red",
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words)(?=/)"
+		},
+
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo
 		"word": {
 			"name": "word.red",
@@ -480,10 +485,11 @@
 				{ "include": "#word-setword" },
 				{ "include": "#word-refinement" },
 				{ "include": "#word-datatype" },
+				{ "include": "#word-group4" },
+				{ "include": "#word-reds-contexts" },
 				{ "include": "#word-group1" },
 				{ "include": "#word-group2" },
 				{ "include": "#word-group3" },
-				{ "include": "#word-group4" },
 				{ "include": "#word-group5" },
 				{ "include": "#word" }
 			]

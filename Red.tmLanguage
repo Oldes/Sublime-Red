@@ -916,6 +916,13 @@
 			<key>name</key>
 			<string>keyword.operator.comparison</string>
 		</dict>
+		<key>word-reds-contexts</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words)(?=/)</string>
+			<key>name</key>
+			<string>entity.other.inherited-class.red</string>
+		</dict>
 		<key>word-refinement</key>
 		<dict>
 			<key>match</key>
@@ -974,6 +981,14 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#word-group4</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#word-reds-contexts</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#word-group1</string>
 				</dict>
 				<dict>
@@ -983,10 +998,6 @@
 				<dict>
 					<key>include</key>
 					<string>#word-group3</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#word-group4</string>
 				</dict>
 				<dict>
 					<key>include</key>
