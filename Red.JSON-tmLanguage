@@ -328,7 +328,7 @@
 
 		"value-number-hex": {
 			"name": "number.red",
-			"match": "([0-9a-fA-F]+)h(?=\\s|\\)|\\])",
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([0-9A-F]+)h(?=\\s|\\)|\\]|/|;|\\\"|{\\[|\\()",
 			"captures": {
 				"1": {"name": "constant.numeric.red"}
 			}
@@ -355,7 +355,6 @@
 				{ "include": "#value-time" },
 				{ "include": "#value-tuple" },
 				{ "include": "#value-number" },
-				{ "include": "#value-number-hex" },
 				{ "include": "#value-pair" },
 				{ "include": "#value-money" }
 			]
@@ -472,6 +471,7 @@
 		"words": {
 			"name": "word.red",
 			"patterns": [
+				{ "include": "#value-number-hex" },
 				{ "include": "#function-definition" },
 				{ "include": "#function-definition-does"},
 				{ "include": "#word-refinement" },

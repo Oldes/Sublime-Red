@@ -791,7 +791,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([0-9a-fA-F]+)h(?=\s|\)|\])</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()([0-9A-F]+)h(?=\s|\)|\]|/|;|\"|{\[|\()</string>
 			<key>name</key>
 			<string>number.red</string>
 		</dict>
@@ -835,10 +835,6 @@
 				<dict>
 					<key>include</key>
 					<string>#value-number</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#value-number-hex</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -940,6 +936,10 @@
 			<string>word.red</string>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#value-number-hex</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#function-definition</string>
