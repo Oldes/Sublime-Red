@@ -376,21 +376,22 @@
 		"word-setword": {
 			"name": "support.variable.setword.red",
 			"match": "[^:\\s\\n\\[\\]\\(\\)]*:"
+			//note: values like [ foo:boo ] are catched as valid url! in REBOL, so keeping this functionality there as well.
 		},
 
 		"word-getword": {
 			"name": "support.variable.getword.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\():[A-Za-z_0-9\\*\\?=_-]+(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\():[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\])"
 		},
 
 		"word-litword": {
 			"name": "keyword.litword.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()'[A-Za-z_0-9\\*\\?=_-]+(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()'[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\])"
 		},
 
 		"word-datatype": {
 			"name": "support.type.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9\\-_\\*\\?]+\\!|as)(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as)(?=\\s|\\)|\\])"
 		},
 		
 		"word-group1": {
@@ -426,7 +427,7 @@
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo
 		"word": {
 			"name": "word.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9\\*\\?=_-]*(?=\\s|\\)|\\]|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']*(?=\\s|\\)|\\]|/|;|\\\"|{)"
 		},
 
 		"function-definition-block": {
@@ -441,7 +442,7 @@
 
 		"function-definition": {
 			"name": "function.definition",
-			"begin": "([A-Za-z=\\!\\?\\*_\\+][A-Za-z0-9=_\\-\\!\\?\\*\\+\\.]*):\\s+(?i)(function|func|funct|routine)\\s*(\\[)",
+			"begin": "([A-Za-z=\\!\\?\\*_\\+][A-Za-z0-9=_\\-\\!\\?\\*\\+\\.~']*):\\s+(?i)(function|func|funct|routine|has)\\s*(\\[)",
 			"beginCaptures": {
 				"1": {"name": "support.variable.function.red"},
 				"2": {"name": "keyword.function"},
