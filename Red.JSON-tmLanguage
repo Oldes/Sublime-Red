@@ -421,7 +421,7 @@
 
 		"word-reds-contexts": {
 			"name": "entity.other.inherited-class.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words)(?=/)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words|float|binary|parser)(?=/)"
 		},
 
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo

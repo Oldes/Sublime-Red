@@ -911,7 +911,7 @@
 		<key>word-reds-contexts</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words)(?=/)</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words|float|binary|parser)(?=/)</string>
 			<key>name</key>
 			<string>entity.other.inherited-class.red</string>
 		</dict>
@@ -925,7 +925,7 @@
 		<key>word-setword</key>
 		<dict>
 			<key>match</key>
-			<string>[^:\s\n\[\]\(\)]*:(?=\s|\(|\[|\)|\]|;|\"|{)</string>
+			<string>[^:\s\n\[\]\(\)]*:</string>
 			<key>name</key>
 			<string>support.variable.setword.red</string>
 		</dict>
