@@ -31,11 +31,11 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#words</string>
+			<string>#values</string>
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#values</string>
+			<string>#words</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -769,7 +769,7 @@
 		<key>value-money</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\w)-?[a-zA-Z]*\$[0-9]+(\.[0-9]{2})?</string>
+			<string>(?&lt;!\w)-?[a-zA-Z]*\$\d+(\.\d*)?</string>
 			<key>name</key>
 			<string>number.money.red</string>
 		</dict>
@@ -836,6 +836,18 @@
 					<key>include</key>
 					<string>#value-money</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value-number-hex</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value-date</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value-time</string>
+				</dict>
 			</array>
 		</dict>
 		<key>word</key>
@@ -848,7 +860,7 @@
 		<key>word-datatype</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()([A-Za-z_0-9=_\-\?\*\+\.~:']+\!|as)(?=\s|\)|\])</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()([A-Za-z_0-9=_\-\?\*\+\.~:']+\!|as|to)(?=\s|\)|\])</string>
 			<key>name</key>
 			<string>support.type.red</string>
 		</dict>
@@ -862,7 +874,7 @@
 		<key>word-group1</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\?|set|shift|throw|to-hex|trace|try|type\?|union|charset|unique|unprotect|unset|use|value\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|protect|lowercase|uppercase|entab|detab|connected\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\s|\(|\[|/|;|\"|{)</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\?|set|shift|throw|to-hex|trace|try|type\?|union|charset|unique|unprotect|unset|use|value\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|arctangent2|atan2|protect|lowercase|uppercase|entab|detab|connected\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\s|\(|\[|/|;|\"|{)</string>
 			<key>name</key>
 			<string>support.function.red</string>
 		</dict>
@@ -876,7 +888,7 @@
 		<key>word-group3</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(insert|append|tail|head|back|repend)(?=\s|\(|\[|\)|\]|/|;|\"|{)</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(at|insert|append|tail|head|back|repend|next)(?=\s|\(|\[|\)|\]|/|;|\"|{)</string>
 			<key>name</key>
 			<string>keyword.series.red</string>
 		</dict>
@@ -935,18 +947,6 @@
 			<string>word.red</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#value-number-hex</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#value-date</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#value-time</string>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>#function-definition</string>

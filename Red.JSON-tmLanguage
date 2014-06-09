@@ -10,9 +10,8 @@
   		{"include": "#comments"},
   		{"include": "#type-literal"},
   		{"include": "#strings"},
-  		{"include": "#words"},
-  		{"include": "#values"}
-  		
+  		{"include": "#values"},
+  		{"include": "#words"}	
   ],
   "repository": {
 
@@ -318,7 +317,7 @@
 
 		"value-money": {
 			"name": "number.money.red",
-			"match": "(?<!\\w)-?[a-zA-Z]*\\$[0-9]+(\\.[0-9]{2})?"
+			"match": "(?<!\\w)-?[a-zA-Z]*\\$\\d+(\\.\\d*)?"
 		},
 
 		"value-number": {
@@ -354,7 +353,10 @@
 				{ "include": "#value-tuple" },
 				{ "include": "#value-number" },
 				{ "include": "#value-pair" },
-				{ "include": "#value-money" }
+				{ "include": "#value-money" },
+				{ "include": "#value-number-hex" },
+				{ "include": "#value-date" },
+				{ "include": "#value-time" }
 			]
 		},
 
@@ -391,12 +393,12 @@
 
 		"word-datatype": {
 			"name": "support.type.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as)(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to)(?=\\s|\\)|\\])"
 		},
 		
 		"word-group1": {
 			"name": "support.function.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|arctangent2|atan2|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[|/|;|\\\"|{)"
 		},
 
 		"word-group2": {
@@ -406,7 +408,7 @@
 
 		"word-group3": {
 			"name": "keyword.series.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(insert|append|tail|head|back|repend)(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(at|insert|append|tail|head|back|repend|next)(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
 		},
 		
 		"word-group4": {
@@ -475,9 +477,6 @@
 		"words": {
 			"name": "word.red",
 			"patterns": [
-				{ "include": "#value-number-hex" },
-				{ "include": "#value-date" },
-				{ "include": "#value-time" },
 				{ "include": "#function-definition" },
 				{ "include": "#function-definition-does"},
 				{ "include": "#word-refinement" },
