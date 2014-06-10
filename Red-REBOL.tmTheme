@@ -14,13 +14,13 @@
         <key>background</key>
         <string>#FFFFFF</string>
         <key>caret</key>
-        <string>#7C7C7C</string>
+        <string>#FF0000</string>
         <key>foreground</key>
         <string>#000000</string>
         <key>invisibles</key>
         <string>#B6B6B6</string>
         <key>lineHighlight</key>
-        <string>#EFFCA68F</string>
+        <string>#ff8086</string>
         <key>selection</key>
         <string>#E3FC8D</string>
       </dict>
@@ -49,7 +49,7 @@
         <key>fontStyle</key>
         <string></string>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#e3c1e1</string>
         <key>background</key>
         <string>#580909</string>
       </dict>
@@ -64,9 +64,9 @@
         <key>fontStyle</key>
         <string></string>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#e3c1e1</string>
         <key>background</key>
-        <string>#f803fb</string>
+        <string>#91428b</string>
       </dict>
     </dict>
 
@@ -213,7 +213,7 @@
       <key>name</key>
       <string>Number</string>
       <key>scope</key>
-      <string>constant.numeric, logic</string>
+      <string>constant.numeric, logic, date, time, number.money</string>
       <key>settings</key>
       <dict>
         <key>fontStyle</key>
@@ -262,9 +262,9 @@
         <key>fontStyle</key>
         <string>bold</string>
         <key>foreground</key>
-        <string>#ffffff</string>
+        <string>#a62f00</string>
         <key>background</key>
-        <string>#f80a0a</string>
+        <string>#ffc1a9</string>
       </dict>
     </dict>
 

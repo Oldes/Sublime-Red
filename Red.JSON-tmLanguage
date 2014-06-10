@@ -393,7 +393,7 @@
 
 		"word-datatype": {
 			"name": "support.type.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to)(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to|as-float|as-integer|as-byte|)(?=\\s|\\)|\\])"
 		},
 		
 		"word-group1": {
@@ -423,7 +423,7 @@
 
 		"word-reds-contexts": {
 			"name": "entity.other.inherited-class.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words|float|binary|parser)(?=/)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(action|bitset|block|char|_context|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words|float|binary|parser|unicode)(?=/)"
 		},
 
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo
