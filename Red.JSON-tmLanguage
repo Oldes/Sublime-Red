@@ -1,76 +1,86 @@
-{ "name": "Red",
-  "scopeName": "source.red",
-  "fileTypes": ["reds", "red"],
+{ 
+	"name": "Red",
+	"scopeName": "source.red",
+	"fileTypes": ["reds", "red"],
 
-  "firstLineMatch": "^\\s*(Red|Red/System)\\s\\[",
-  "foldingStartMarker": "^([^;]*[\\[\\{\\(])+\\s*(\\;.*)?$",
-  "foldingStopMarker": "^\\s*[\\]\\}\\)].*$",
+	"firstLineMatch": "^\\s*(Red|Red/System)\\s\\[",
+	"foldingStartMarker": "^([^;]*[\\[\\{\\(])+\\s*(\\;.*)?$",
+	"foldingStopMarker": "^\\s*[\\]\\}\\)].*$",
 
-  "patterns": [
+	"patterns": [
   		{"include": "#comments"},
   		{"include": "#type-literal"},
   		{"include": "#strings"},
   		{"include": "#values"},
   		{"include": "#words"}	
-  ],
-  "repository": {
+	],
+
+	"repository": {
 
 		"binary-base-sixtyfour": {
-		   "name": "binary.base64.red",
-		   "begin": "64#\\{",
-		   "beginCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   },
-		   "patterns": [	      
-		       {  "name": "string.binary.base64.red",
-		          "match": "[0-9a-zA-Z+/=\\s]*"
-		       },
-		       {  "name": "invalid.illegal.red",
-		          "match": "."
-		       }
-		   ],
-		   "end": "\\}",
-		   "endCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   }
+			"name": "binary.base64.red",
+			"begin": "64#\\{",
+			"beginCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			},
+			"patterns": [
+				{
+					"name": "string.binary.base64.red",
+					"match": "[0-9a-zA-Z+/=\\s]*"
+				},
+				{
+					"name": "invalid.illegal.red",
+					"match": "."
+				}
+			],
+			"end": "\\}",
+			"endCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			}
 		},
-		 "binary-base-sixteen":  {
-  		   "name": "binary.base16.red",
-		   "begin": "(16)?#\\{",
-		   "beginCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   },
-		   "patterns": [	      
-		       {  "name": "string.binary.base16.red",
-		          "match": "[0-9a-fA-F]{2,2}"
-		       },
-		       {  "name": "invalid.illegal.red",
-		          "match": "."
-		       }
-		   ],
-		   "end": "\\}",
-		   "endCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   }
+
+		"binary-base-sixteen":  {
+  			"name": "binary.base16.red",
+			"begin": "(16)?#\\{",
+			"beginCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			},
+			"patterns": [			
+				{	
+					"name": "string.binary.base16.red",
+					"match": "[0-9a-fA-F]{2,2}"
+				},
+				{
+					"name": "invalid.illegal.red",
+					"match": "."
+				}
+			],
+			"end": "\\}",
+			"endCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			}
 		},
+
 		"binary-base-two": {
-		   "name": "binary.base2.red",
-		   "begin": "2#\\{",
-		   "beginCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   },
-		   "patterns": [	      
-		       {  "name": "string.binary.base2.red",
-		          "match": "([01]\\s*){8}"
-		       },
-		       {  "name": "invalid.illegal.red",
-		          "match": "."
-		       }
-		   ],
-		   "end": "\\}",
-		   "endCaptures": {
-		       "0": { "name": "string.binary.prefix" }
-		   }
+			"name": "binary.base2.red",
+			"begin": "2#\\{",
+			"beginCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			},
+			"patterns": [			
+				{
+					"name": "string.binary.base2.red",
+					"match": "([01]\\s*){8}"
+				},
+				{
+					"name": "invalid.illegal.red",
+					"match": "."
+				}
+			],
+			"end": "\\}",
+			"endCaptures": {
+				"0": { "name": "string.binary.prefix" }
+			}
 		},
 
   		"character": {
@@ -82,8 +92,8 @@
 			"name": "constant.character.entity.html",
 			"match": "(&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)",
 			"captures": {
-			    "0": { "name": "punctuation.definition.entity.html" },
-			    "2": { "name": "punctuation.definition.entity.html" }
+				"0": { "name": "punctuation.definition.entity.html" },
+				"2": { "name": "punctuation.definition.entity.html" }
 			}
 		},
 
@@ -93,18 +103,18 @@
 		},
 
 		"comment-docline": {
-		   "name": "comment.docline.red",
-		   "match": ";-.*?(?=\\%>|$)"
+			"name": "comment.docline.red",
+			"match": ";-.*?(?=\\%>|$)"
 		},
 
 		"comment-todo": {
-		   "name": "comment.todo.red",
-		   "match": ";@@.*?(?=\\%>|$)"
+			"name": "comment.todo.red",
+			"match": ";@@.*?(?=\\%>|$)"
 		},
 
 		"comment-line": {
-		   "name": "comment.line.red",
-		   "match": ";.*?(?=\\%>|$)"
+			"name": "comment.line.red",
+			"match": ";.*?(?=\\%>|$)"
 		},
 		
 		"comment-multiline-block": {
@@ -117,6 +127,7 @@
 				{"include": "#comment-multiline-block-nested" }
 			]
 		},
+
 		"comment-multiline-block-string": {
 			"name": "comment.multiline.red",
 			"begin": "\"",
@@ -172,6 +183,7 @@
 			"begin": "'",
 			"end": "'"
 		},
+
 		"doublequotedString": {
 			"name": "string.quoted.double.xml",
 			"begin": "\"",
@@ -201,16 +213,17 @@
 			"name": "string.file.quoted.red",
 			"begin": "%\"",
 			"beginCaptures": {
-			   "0": { "name": "string.file.quoted.red" }
+				"0": { "name": "string.file.quoted.red" }
 			},
 			"patterns": [
-				   { "name": "string.escape.ssraw",
-				     "match": "%[A-Fa-f0-9]{2}"
-				   }
+				{
+					"name": "string.escape.ssraw",
+					"match": "%[A-Fa-f0-9]{2}"
+				}
 			],
 			"end": "\"",
 			"endCaptures": {
-			   "0": { "name": "string.file.quoted.red" }
+				"0": { "name": "string.file.quoted.red" }
 			}
 		},
 
@@ -255,16 +268,16 @@
 			"name": "entity.tag.red",
 			"begin": "<(?:\\/|%\\=?\\ )?(?:([-_a-zA-Z0-9]+):)?([-_a-zA-Z0-9:]+)",
 			"beginCaptures": {
-			   "0": { "name": "entity.other.namespace.xml" },
-			   "1": { "name": "entity.name.tag.xml" }
+				"0": { "name": "entity.other.namespace.xml" },
+				"1": { "name": "entity.name.tag.xml" }
 			},
 			"end": "(?:\\s/|\\ %)?>",
 			"patterns": [
 				{
 					"match": " (?:([-_a-zA-Z0-9]+):)?([_a-zA-Z-]+)",
 					"captures": {
-				    	"0": { "name": "entity.other.namespace.xml" },
-				    	"1": { "name": "entity.other.attribute-name.xml" }
+					 	"0": { "name": "entity.other.namespace.xml" },
+					 	"1": { "name": "entity.other.attribute-name.xml" }
 					}
 				},
 				{ "include": "#singlequotedString" },
@@ -461,7 +474,6 @@
 				{ "include": "#word-setword" },
 				{ "include": "#word-datatype" },
 				{ "include": "#word-refinement" }
-
 			]
 		},
 
@@ -495,5 +507,6 @@
 			]
 		}
   },
+  
   "uuid": "d5b29cdd-d851-4c62-aee2-00cd24d5f158"
 }
