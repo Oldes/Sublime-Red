@@ -1,0 +1,6 @@
+<snippet>
+	<description>#export</description>
+    <content><![CDATA[#export ${1:cconv} [${2:symbols}]]]></content>
+    <tabTrigger>pexport</tabTrigger>
+    <scope>source.red</scope>
+</snippet>

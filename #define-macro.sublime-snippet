@@ -1,0 +1,6 @@
+<snippet>
+	<description>#define macro</description>
+    <content><![CDATA[#define ${1:name}(${2:args}) (${3:})]]></content>
+    <tabTrigger>pdefm</tabTrigger>
+    <scope>source.red</scope>
+</snippet>

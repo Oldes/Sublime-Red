@@ -1,0 +1,6 @@
+<snippet>
+	<description>#enum</description>
+    <content><![CDATA[#enum ${1:name}! [${2:}]]]></content>
+    <tabTrigger>penum</tabTrigger>
+    <scope>source.red</scope>
+</snippet>
