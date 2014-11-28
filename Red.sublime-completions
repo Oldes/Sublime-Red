@@ -120,7 +120,6 @@
 		{"trigger": "next", "contents": "next"},
 		{"trigger": "no", "contents": "no"},
 		{"trigger": "none", "contents": "none"},
-		{"trigger": "none", "contents": "none"},
 		{"trigger": "not", "contents": "not"},
 		{"trigger": "now", "contents": "now"},
 		{"trigger": "null", "contents": "null"},
