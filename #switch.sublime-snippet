@@ -1,0 +1,16 @@
+<snippet>
+	<description>#switch</description>
+    <content><![CDATA[#switch ${1:option} [
+    ${2:value-1} [
+
+    ]
+    ${3:value-2} [
+
+    ]
+    #default [
+
+    ]
+]]]></content>
+    <tabTrigger>pswitch</tabTrigger>
+    <scope>source.red</scope>
+</snippet>

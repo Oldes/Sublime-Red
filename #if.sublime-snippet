@@ -1,0 +1,8 @@
+<snippet>
+	<description>#if</description>
+    <content><![CDATA[#if ${1:option} ${2:op} ${3:value} [
+    ${4:}
+]]]></content>
+    <tabTrigger>pif</tabTrigger>
+    <scope>source.red</scope>
+</snippet>

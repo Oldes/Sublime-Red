@@ -1,0 +1,10 @@
+<snippet>
+	<description>#either</description>
+    <content><![CDATA[#either ${1:option} ${2:op} ${3:value} [
+
+][
+	
+]]]></content>
+    <tabTrigger>peither</tabTrigger>
+    <scope>source.red</scope>
+</snippet>

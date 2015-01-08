@@ -1,0 +1,8 @@
+<snippet>
+	<description>#system</description>
+    <content><![CDATA[#system [
+    ${1:}
+]]]></content>
+    <tabTrigger>psys</tabTrigger>
+    <scope>source.red</scope>
+</snippet>
