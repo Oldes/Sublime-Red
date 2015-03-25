@@ -335,12 +335,12 @@
 
 		"value-number": {
 			"name": "constant.numeric.red",
-			"match": "(?<!\\w|\\.)([-+]?((\\d+\\.?\\d*)|(\\.\\d+))((e|E)(\\+|-)?\\d+)?)(?=\\W)"
+			"match": "(?<!\\w|\\.)([-+]?((\\d+\\.?\\d*)|(\\.\\d+))((e|E)(\\+|-)?\\d+)?)(?=\\W|$)"
 		},
 
 		"value-number-hex": {
 			"name": "number.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([0-9A-F]+)h(?=\\s|\\)|\\]|/|;|\\\"|{\\[|\\()",
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([0-9A-F]+)h(?=\\s|\\)|\\]|/|;|\\\"|{\\[|\\(|$)",
 			"captures": {
 				"1": {"name": "constant.numeric.red"}
 			}
@@ -380,7 +380,7 @@
 		
 		"word-operator": {
 			"name": "keyword.operator.comparison",
-			"match": "(==|!=|<=|>=|<>|<|>|>>|>>>|<<|\\+|-|=|\\*|%|/|\\b(and|or|xor))(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
+			"match": "(==|!=|<=|>=|<>|<|>|>>|>>>|<<|\\+|-|=|\\*|%|/|\\b(and|or|xor))(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{|$)"
 		},
 
 		"parens": {
@@ -396,42 +396,42 @@
 
 		"word-getword": {
 			"name": "support.variable.getword.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\():[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\():[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\]|$)"
 		},
 
 		"word-litword": {
 			"name": "keyword.litword.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()'[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()'[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']+(?=\\s|\\)|\\]|$)"
 		},
 
 		"word-datatype": {
 			"name": "support.type.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to|as-float|as-integer|as-byte)(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to|as-float|as-integer|as-byte)(?=\\s|\\)|\\]|$)"
 		},
 		
 		"word-group1": {
 			"name": "support.function.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|arctangent2|atan2|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(native|alias|all|any|as-string|as-binary|bind|bound\\?|case|catch|checksum|comment|debase|dehex|exclude|difference|disarm|enbase|form|free|get|get-env|in|intersect|minimum-of|maximum-of|mold|new-line|new-line\\?|not|now|prin|print|reduce|compose|construct|reverse|save|script\\?|set|shift|throw|to-hex|trace|try|type\\?|union|charset|unique|unprotect|unset|use|value\\?|compress|decompress|secure|open|close|read|read-io|write-io|write|update|query|wait|input\\?|exp|log-10|log-2|log-e|square-root|cosine|sine|tangent|arccosine|arcsine|arctangent|arctangent2|atan2|protect|lowercase|uppercase|entab|detab|connected\\?|browse|launch|stats|get-modes|set-modes|to-local-file|to-rebol-file|encloak|decloak|create-link|do-browser|bind\\?|hide|draw|show|size-text|textinfo|offset-to-caret|caret-to-offset|local-request-file|rgb-to-hsv|hsv-to-rgb|crypt-strength\\?|dh-make-key|dh-generate-key|dh-compute-key|dsa-make-key|dsa-generate-key|dsa-make-signature|dsa-verify-signature|rsa-make-key|rsa-generate-key|rsa-encrypt)(?=\\s|\\(|\\[|/|;|\\\"|{|$)"
 		},
 
 		"word-group2": {
 			"name": "support.function.group2.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(if|either|unless|else|for|foreach|forall|remove-each|until|while|case|loop|repeat|switch)(?=\\s|\\(|\\[|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(if|either|unless|else|for|foreach|forall|remove-each|until|while|case|loop|repeat|switch)(?=\\s|\\(|\\[|/|;|\\\"|{|$)"
 		},
 
 		"word-group3": {
 			"name": "keyword.series.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(at|insert|append|tail|head|back|repend|next)(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(at|insert|append|tail|head|back|repend|next)(?=\\s|\\(|\\[|\\)|\\]|/|;|\\\"|{|$)"
 		},
 		
 		"word-group4": {
 			"name": "logic.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(off|false|none|on|true|yes|no|null)(?=\\s|\\(|\\[|\\)|\\]|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(off|false|none|on|true|yes|no|null)(?=\\s|\\(|\\[|\\)|\\]|;|\\\"|{|$)"
 		},
 
 		"word-group5": {
 			"name": "keyword.breaks.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(halt|quit|exit|return|break|quit)(?=\\s|\\(|\\[|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()(?i)(halt|quit|exit|return|break|quit)(?=\\s|\\(|\\[|/|;|\\\"|{|$)"
 		},
 
 		"word-reds-contexts": {
@@ -442,7 +442,7 @@
 		//WORD is defined here so numbers are not detected inside words like:  foo-2-boo
 		"word": {
 			"name": "word.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']*(?=\\s|\\)|\\]|/|;|\\\"|{)"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()[A-Za-z_\\*\\?=_-]+[A-Za-z_0-9=_\\-\\!\\?\\*\\+\\.~:']*(?=\\s|\\)|\\]|/|;|\\\"|{|$)"
 		},
 
 		"function-definition-block": {
