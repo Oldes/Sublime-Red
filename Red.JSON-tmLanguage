@@ -406,7 +406,7 @@
 
 		"word-datatype": {
 			"name": "support.type.red",
-			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to|as-float|as-integer|as-byte|)(?=\\s|\\)|\\])"
+			"match": "(?<=^|\\s|\\[|\\]|\\)|\\()([A-Za-z_0-9=_\\-\\?\\*\\+\\.~:']+\\!|as|to|as-float|as-integer|as-byte)(?=\\s|\\)|\\])"
 		},
 		
 		"word-group1": {

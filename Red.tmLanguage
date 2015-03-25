@@ -860,7 +860,7 @@
 		<key>word-datatype</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()([A-Za-z_0-9=_\-\?\*\+\.~:']+\!|as|to|as-float|as-integer|as-byte|)(?=\s|\)|\])</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()([A-Za-z_0-9=_\-\?\*\+\.~:']+\!|as|to|as-float|as-integer|as-byte)(?=\s|\)|\])</string>
 			<key>name</key>
 			<string>support.type.red</string>
 		</dict>
