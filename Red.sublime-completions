@@ -41,7 +41,7 @@
 		{"trigger": "compress", "contents": "compress"},
 		{"trigger": "connected?", "contents": "connected?"},
 		{"trigger": "construct", "contents": "construct"},
-		{"trigger": "context", "contents": "context"}
+		{"trigger": "context", "contents": "context"},
 		{"trigger": "cosine", "contents": "cosine"},
 		{"trigger": "create-link", "contents": "create-link"},
 		{"trigger": "crypt-strength?", "contents": "crypt-strength?"},
@@ -199,6 +199,6 @@
 		{"trigger": "words", "contents": "words"},
 		{"trigger": "write", "contents": "write"},
 		{"trigger": "write-io", "contents": "write-io"},
-		{"trigger": "yes", "contents": "yes"},
+		{"trigger": "yes", "contents": "yes"}
 	]
 }
