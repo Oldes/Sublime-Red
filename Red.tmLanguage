@@ -923,7 +923,7 @@
 		<key>word-reds-contexts</key>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(platform|action|actions|refinements|natives|bitset|block|char|_context|_function|_random|datatype|file|function|get-path|get-word|integer|issue|lit-path|lit-word|logic|native|none|object|op|paren|path|point|refinement|routine|set-path|set-word|string|symbol|unset|url|word|interpreter|stack|words|float|binary|parser|unicode)(?=/)</string>
+			<string>(?&lt;=^|\s|\[|\]|\)|\()(?i)(_context|_function|_random|action|actions|bitset|block|char|datatype|error|file|function|get-path|get-word|hash|integer|issue|lit-path|lit-word|logic|native|natives|none|object|op|paren|path|platform|point|redbin|refinement|refinements|routine|set-path|set-word|string|symbol|system|typeset|unset|url|vector|word|interpreter|stack|words|float|binary|parser|unicode)(?=/)</string>
 			<key>name</key>
 			<string>entity.other.inherited-class.red</string>
 		</dict>
