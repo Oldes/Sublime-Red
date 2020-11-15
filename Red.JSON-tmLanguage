@@ -8,11 +8,11 @@
 	"foldingStopMarker": "^\\s*[\\]\\}\\)].*$",
 
 	"patterns": [
-  		{"include": "#comments"},
-  		{"include": "#type-literal"},
-  		{"include": "#strings"},
-  		{"include": "#values"},
-  		{"include": "#words"}	
+		{"include": "#comments"},
+		{"include": "#type-literal"},
+		{"include": "#strings"},
+		{"include": "#values"},
+		{"include": "#words"}	
 	],
 
 	"repository": {
@@ -24,6 +24,9 @@
 				"0": { "name": "string.binary.prefix" }
 			},
 			"patterns": [
+				{   "name": "comment.line.red",
+					"match": ";.*?$"
+				},  
 				{
 					"name": "string.binary.base64.red",
 					"match": "[0-9a-zA-Z+/=\\s]*"
@@ -40,15 +43,18 @@
 		},
 
 		"binary-base-sixteen":  {
-  			"name": "binary.base16.red",
+			"name": "binary.base16.red",
 			"begin": "(16)?#\\{",
 			"beginCaptures": {
 				"0": { "name": "string.binary.prefix" }
 			},
-			"patterns": [			
+			"patterns": [	
+				{   "name": "comment.line.red",
+					"match": ";.*?$"
+				},  		
 				{	
 					"name": "string.binary.base16.red",
-					"match": "[0-9a-fA-F]{2,2}"
+					"match": "[0-9a-fA-F\\s]*"
 				},
 				{
 					"name": "invalid.illegal.red",
@@ -67,10 +73,13 @@
 			"beginCaptures": {
 				"0": { "name": "string.binary.prefix" }
 			},
-			"patterns": [			
+			"patterns": [	
+				{   "name": "comment.line.red",
+					"match": ";.*?$"
+				},  		
 				{
 					"name": "string.binary.base2.red",
-					"match": "([01]\\s*){8}"
+					"match": "[01\\s]*"
 				},
 				{
 					"name": "invalid.illegal.red",
@@ -83,7 +92,7 @@
 			}
 		},
 
-  		"character": {
+		"character": {
 			"name": "string.character.red",
 			"match": "#\"(\\^(\\(([0-9a-fA-F]+|del)\\)|.)|[^\\^\\\"])\""
 		},
@@ -276,8 +285,8 @@
 				{
 					"match": " (?:([-_a-zA-Z0-9]+):)?([_a-zA-Z-]+)",
 					"captures": {
-					 	"0": { "name": "entity.other.namespace.xml" },
-					 	"1": { "name": "entity.other.attribute-name.xml" }
+						"0": { "name": "entity.other.namespace.xml" },
+						"1": { "name": "entity.other.attribute-name.xml" }
 					}
 				},
 				{ "include": "#singlequotedString" },
